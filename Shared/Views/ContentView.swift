@@ -26,7 +26,7 @@ struct ContentView: View {
             }
         }
         .sheet(isPresented: $showingAddTask) {
-            AddTask(showing: $showingAddTask)
+            AddTask(store: store, showing: $showingAddTask)
         }
     }
 }
