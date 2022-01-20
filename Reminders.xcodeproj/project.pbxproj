@@ -16,6 +16,8 @@
 		7FD9D7902799C33C00109184 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD9D78F2799C33C00109184 /* Task.swift */; };
 		7FD9D7922799C38900109184 /* TaskPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD9D7912799C38900109184 /* TaskPriority.swift */; };
 		7FD9D7942799C3BF00109184 /* TaskStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD9D7932799C3BF00109184 /* TaskStore.swift */; };
+		7FD9D7972799CBB600109184 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD9D7962799CBB600109184 /* TaskCell.swift */; };
+		7FD9D7982799CBB600109184 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD9D7962799CBB600109184 /* TaskCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,7 @@
 		7FD9D78F2799C33C00109184 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		7FD9D7912799C38900109184 /* TaskPriority.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskPriority.swift; sourceTree = "<group>"; };
 		7FD9D7932799C3BF00109184 /* TaskStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskStore.swift; sourceTree = "<group>"; };
+		7FD9D7962799CBB600109184 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,8 +65,8 @@
 			children = (
 				7FD9D76F2799C2C600109184 /* RemindersApp.swift */,
 				7FD9D78E2799C2E500109184 /* Model */,
+				7FD9D7952799C4FF00109184 /* ViewModel */,
 				7FD9D78D2799C2DE00109184 /* Views */,
-				7FD9D7702799C2C600109184 /* ContentView.swift */,
 				7FD9D7712799C2CD00109184 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -89,6 +92,8 @@
 		7FD9D78D2799C2DE00109184 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7FD9D7702799C2C600109184 /* ContentView.swift */,
+				7FD9D7962799CBB600109184 /* TaskCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -98,9 +103,16 @@
 			children = (
 				7FD9D78F2799C33C00109184 /* Task.swift */,
 				7FD9D7912799C38900109184 /* TaskPriority.swift */,
-				7FD9D7932799C3BF00109184 /* TaskStore.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		7FD9D7952799C4FF00109184 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7FD9D7932799C3BF00109184 /* TaskStore.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,6 +217,7 @@
 				7FD9D7812799C2CD00109184 /* ContentView.swift in Sources */,
 				7FD9D7902799C33C00109184 /* Task.swift in Sources */,
 				7FD9D7922799C38900109184 /* TaskPriority.swift in Sources */,
+				7FD9D7972799CBB600109184 /* TaskCell.swift in Sources */,
 				7FD9D77F2799C2CD00109184 /* RemindersApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -214,6 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FD9D7822799C2CD00109184 /* ContentView.swift in Sources */,
+				7FD9D7982799CBB600109184 /* TaskCell.swift in Sources */,
 				7FD9D7802799C2CD00109184 /* RemindersApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
