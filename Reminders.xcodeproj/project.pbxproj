@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7F801FBC2799CE78009772EC /* AddTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F801FBB2799CE78009772EC /* AddTask.swift */; };
 		7F801FBD2799CE78009772EC /* AddTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F801FBB2799CE78009772EC /* AddTask.swift */; };
+		7FCFD46F27A0468700251663 /* VisibleTaskPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCFD46E27A0468700251663 /* VisibleTaskPriority.swift */; };
 		7FD9D77F2799C2CD00109184 /* RemindersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD9D76F2799C2C600109184 /* RemindersApp.swift */; };
 		7FD9D7802799C2CD00109184 /* RemindersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD9D76F2799C2C600109184 /* RemindersApp.swift */; };
 		7FD9D7812799C2CD00109184 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD9D7702799C2C600109184 /* ContentView.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		7F801FBB2799CE78009772EC /* AddTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTask.swift; sourceTree = "<group>"; };
+		7FCFD46E27A0468700251663 /* VisibleTaskPriority.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisibleTaskPriority.swift; sourceTree = "<group>"; };
 		7FD9D76F2799C2C600109184 /* RemindersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersApp.swift; sourceTree = "<group>"; };
 		7FD9D7702799C2C600109184 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7FD9D7712799C2CD00109184 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 			children = (
 				7FD9D78F2799C33C00109184 /* Task.swift */,
 				7FD9D7912799C38900109184 /* TaskPriority.swift */,
+				7FCFD46E27A0468700251663 /* VisibleTaskPriority.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 				7FD9D7972799CBB600109184 /* TaskCell.swift in Sources */,
 				7F801FBC2799CE78009772EC /* AddTask.swift in Sources */,
 				7FD9D77F2799C2CD00109184 /* RemindersApp.swift in Sources */,
+				7FCFD46F27A0468700251663 /* VisibleTaskPriority.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

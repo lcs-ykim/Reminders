@@ -17,48 +17,74 @@ struct ContentView: View {
     
     @State var listShouldUpdate = false
     
+    @State private var selectedPriorityForVisibleTasks: VisibleTaskPriority = .all
+    
     var body: some View {
         
         let _ = print("listShouldUpdate has been toggled. Current value is: \(listShouldUpdate)")
+        
+        let _ = print("Filtering tasks by this priority: \(selectedPriorityForVisibleTasks)")
 
-        List {
-            ForEach(store.tasks) { task in
-                
-                if showingCompletedTasks {
-                    TaskCell(task: task, triggerListUpdate: .constant(true))
-                } else {
+        VStack {
+            
+            Text("Filter by...")
+                .font(Font.caption.smallCaps())
+                .foregroundColor(.secondary)
+            
+            Picker("Priority", selection: $selectedPriorityForVisibleTasks) {
+                Text(VisibleTaskPriority.all.rawValue)
+                    .tag(VisibleTaskPriority.all)
+                Text(VisibleTaskPriority.low.rawValue)
+                    .tag(VisibleTaskPriority.all)
+                Text(VisibleTaskPriority.medium.rawValue)
+                    .tag(VisibleTaskPriority.all)
+                Text(VisibleTaskPriority.high.rawValue)
+                    .tag(VisibleTaskPriority.low)
+            }
+            .pickerStyle(.segmented)
+            .padding(.horizontal)
+            
+            List {
+                ForEach(store.tasks) { task in
                     
-                    if task.completed == false {
-                        TaskCell(task: task, triggerListUpdate: $listShouldUpdate)
+                    if showingCompletedTasks {
+                        TaskCell(task: task, triggerListUpdate: .constant(true))
+                    } else {
+                        
+                        if task.completed == false {
+                            TaskCell(task: task, triggerListUpdate: $listShouldUpdate)
+                        }
+                        
                     }
-                    
                 }
+                .onDelete(perform: store.deleteItems)
+                .onMove(perform: store.moveItems)
             }
-            .onDelete(perform: store.deleteItems)
-            .onMove(perform: store.moveItems)
-        }
-        .navigationTitle("Reminders")
-        .toolbar {
-            ToolbarItem(placement: .primaryAction) {
-                Button("Add") {
-                    showingAddTask = true
+            .navigationTitle("Reminders")
+            .toolbar {
+                ToolbarItem(placement: .primaryAction) {
+                    Button("Add") {
+                        showingAddTask = true
+                    }
                 }
+                
+                ToolbarItem(placement: .navigationBarLeading) {
+                    EditButton()
+                }
+                
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button(showingCompletedTasks ? "Hide Completed Tasks" : "Show Completed Tasks") {
+                        showingCompletedTasks.toggle()
+                    }
+                }
+                
+            }
+            .sheet(isPresented: $showingAddTask) {
+                AddTask(store: store, showing: $showingAddTask)
             }
             
-            ToolbarItem(placement: .navigationBarLeading) {
-                EditButton()
-            }
-            
-            ToolbarItem(placement: .navigationBarLeading) {
-                Button(showingCompletedTasks ? "Hide Completed Tasks" : "Show Completed Tasks") {
-                    showingCompletedTasks.toggle()
-                }
-            }
-
         }
-        .sheet(isPresented: $showingAddTask) {
-            AddTask(store: store, showing: $showingAddTask)
-        }
+        
     }
 }
 
