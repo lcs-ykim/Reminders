@@ -24,6 +24,14 @@ class TaskStore: ObservableObject {
         // the "tasks" array which handles removal from the array
         tasks.remove(atOffsets: offsets)
     }
+    
+    func moveItems(from source: IndexSet, to destination: Int) {
+        // "source" again contains a set of item(s) being moved
+        // "destination" is the location the items are being saved to in the list
+        // These arguments are automatically populated for us by the
+        // .onMove iew modifier provided by the SwiftUI framework
+        tasks.move(fromOffsets: source, toOffset: destination)
+    }
 }
 
 let testStore = TaskStore(tasks: testData)
