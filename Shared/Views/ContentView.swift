@@ -13,6 +13,8 @@ struct ContentView: View {
     
     @State private var showingAddTask = false
     
+    @State var showingCompletedTasks = true
+    
     var body: some View {
         List {
             ForEach(store.tasks) { task in
@@ -31,6 +33,12 @@ struct ContentView: View {
             
             ToolbarItem(placement: .navigationBarLeading) {
                 EditButton()
+            }
+            
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button(showingCompletedTasks ? "Hide Completed Tasks" : "Show Completed Tasks") {
+                    showingCompletedTasks.toggle()
+                }
             }
 
         }
