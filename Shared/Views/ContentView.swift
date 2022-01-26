@@ -24,7 +24,7 @@ struct ContentView: View {
         let _ = print("listShouldUpdate has been toggled. Current value is: \(listShouldUpdate)")
         
         let _ = print("Filtering tasks by this priority: \(selectedPriorityForVisibleTasks)")
-
+        
         VStack {
             
             Text("Filter by...")
@@ -61,7 +61,7 @@ struct ContentView: View {
                                 
                             }
                         }
-
+                        
                     } else {
                         
                         
@@ -70,20 +70,23 @@ struct ContentView: View {
                             if selectedPriorityForVisibleTasks == .all {
                                 
                                 TaskCell(task: task, triggerListUpdate: $listShouldUpdate)
-
+                                
                             } else {
                                 
                                 if task.priority.rawValue == selectedPriorityForVisibleTasks.rawValue {
                                     
                                     TaskCell(task: task, triggerListUpdate: $listShouldUpdate)
-
+                                    
+                                }
                             }
+                            
                         }
-                        
                     }
+ 
                 }
                 .onDelete(perform: store.deleteItems)
                 .onMove(perform: store.moveItems)
+                
             }
             .navigationTitle("Reminders")
             .toolbar {
@@ -109,14 +112,12 @@ struct ContentView: View {
             }
             
         }
-        
     }
 }
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationView {
-            ContentView(store: testStore)
+    struct ContentView_Previews: PreviewProvider {
+        static var previews: some View {
+            NavigationView {
+                ContentView(store: testStore)
+            }
         }
     }
-}

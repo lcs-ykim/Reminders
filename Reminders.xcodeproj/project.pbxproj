@@ -10,6 +10,7 @@
 		7F801FBC2799CE78009772EC /* AddTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F801FBB2799CE78009772EC /* AddTask.swift */; };
 		7F801FBD2799CE78009772EC /* AddTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F801FBB2799CE78009772EC /* AddTask.swift */; };
 		7FCFD46F27A0468700251663 /* VisibleTaskPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCFD46E27A0468700251663 /* VisibleTaskPriority.swift */; };
+		7FCFD47627A0501900251663 /* SharedFunctionsAndConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCFD47527A0500000251663 /* SharedFunctionsAndConstants.swift */; };
 		7FD9D77F2799C2CD00109184 /* RemindersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD9D76F2799C2C600109184 /* RemindersApp.swift */; };
 		7FD9D7802799C2CD00109184 /* RemindersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD9D76F2799C2C600109184 /* RemindersApp.swift */; };
 		7FD9D7812799C2CD00109184 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD9D7702799C2C600109184 /* ContentView.swift */; };
@@ -26,6 +27,7 @@
 /* Begin PBXFileReference section */
 		7F801FBB2799CE78009772EC /* AddTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTask.swift; sourceTree = "<group>"; };
 		7FCFD46E27A0468700251663 /* VisibleTaskPriority.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisibleTaskPriority.swift; sourceTree = "<group>"; };
+		7FCFD47527A0500000251663 /* SharedFunctionsAndConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedFunctionsAndConstants.swift; sourceTree = "<group>"; };
 		7FD9D76F2799C2C600109184 /* RemindersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersApp.swift; sourceTree = "<group>"; };
 		7FD9D7702799C2C600109184 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7FD9D7712799C2CD00109184 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -56,6 +58,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7FCFD47427A04EF300251663 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				7FCFD47527A0500000251663 /* SharedFunctionsAndConstants.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		7FD9D7692799C2C500109184 = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				7FD9D76F2799C2C600109184 /* RemindersApp.swift */,
+				7FCFD47427A04EF300251663 /* Helpers */,
 				7FD9D78E2799C2E500109184 /* Model */,
 				7FD9D7952799C4FF00109184 /* ViewModel */,
 				7FD9D78D2799C2DE00109184 /* Views */,
@@ -220,6 +231,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FCFD47627A0501900251663 /* SharedFunctionsAndConstants.swift in Sources */,
 				7FD9D7942799C3BF00109184 /* TaskStore.swift in Sources */,
 				7FD9D7812799C2CD00109184 /* ContentView.swift in Sources */,
 				7FD9D7902799C33C00109184 /* Task.swift in Sources */,
